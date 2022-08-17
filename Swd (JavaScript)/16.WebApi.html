@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<audio src="../assets/assets/mmidol_4_song.mp3" controls></audio>-->
+<input type="file" id="upload">
+<ul id="list"></ul>
+
+<form action="" id="form">
+    <input type="text1" name="user" >
+    <input type="text2" name="password">
+    <button>Submit</button>
+</form>
+
+<script>
+    let a = new Audio("../assets/assets/mmidol_4_song.mp3");
+    let upload = document.getElementById("upload");
+    let form  = document.getElementById("form");
+
+    upload.addEventListener("change",function (){
+        let up = this.files;
+        console.log(up);
+        for(x of up){
+            document.getElementById("list").innerHTML = `<li>${x.name}</li>`;
+        }
+    })
+
+    
+
+    form.addEventListener("submit",function(event){
+        event.preventDefault()
+        let formData = new FormData(this);
+        formData.append("junior","Web Dev");
+        for(const pair of formData.entries()){
+            console.log(pair[0]+"-"+pair[1])
+        }
+
+    })
+
+</script>
+
+</body>
+</html>

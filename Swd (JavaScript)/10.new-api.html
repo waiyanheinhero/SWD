@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .news{
+            width: 80%;
+            columns: 3 250px;
+            margin: 10px auto;
+        }
+        .cardtitle{
+            width: 100%;
+        }
+        .img{
+            width: 100%;
+        }
+        .title{
+
+        }
+        .author{
+
+        }
+        .description{
+
+        }
+        .read-more{
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="news">
+
+    </div>
+
+
+
+    <script src="./js/new.js"></script>
+    <script>
+
+        let api = data.articles; 
+        let news = document.querySelector(".news");
+        
+        api.map(function(el,index){
+            console.log(el)
+            news.innerHTML += `
+            <div class="cardtitle">
+                <img src="${el.urlToImage}" alt="" class="img">
+                <h1 class="title">${el.title}</h1>
+                <small class="author">${el.author}</small>
+                <p class="description">${el.description}</p>
+                <a href="${el.url}" class="read-more">See-More</a>
+            </div>`;
+        })
+
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Piano Project</title>
+</head>
+<body>
+
+    <input type="text" id="cords">
+    <button onclick="saveChord()">SaveMemory</button>
+    <br>
+    <br>
+
+        <button onclick="run('C4')">C</button>
+        <button onclick="run('D4')">D</button>
+        <button onclick="run('E4')">E</button>
+        <button onclick="run('F4')">F</button>
+        <button onclick="run('G4')">G</button>
+        <button onclick="run('A4')">A</button>
+        <button onclick="run('B4')">B</button>
+        <button onclick="run('C5')">C1</button>
+
+    <ul id="list"></ul>
+
+<script>
+
+    let cords = document.getElementById("cords");
+    let saveMemory = [];
+    let list = document.getElementById("list")
+
+    function run(x){
+        const a = new Audio(`./js/sound/${x}.mp3`);
+        a.play();
+        cords.value += x+ ",";
+    }
+
+    function saveChord(){
+        saveMemory.push(cords.value);
+        console.log("i am save");
+        cords.value = "";
+        list.innerHTML = "";
+
+        saveMemory.map(function(el,index){
+            list.innerHTML += `<li>${el} <button onclick="rePlay(${index})">Replay</button></li>`
+        })
+    };
+
+
+    let m =["C4","E4","G4"];
+    function Memory(arr,second=1000){
+        let x = second;
+        arr.map(function (el){
+            setTimeout(run,x,el);
+            x += 1000;
+        })
+    }
+
+    function rePlay(x){
+        let current = saveMemory[x].split(",");
+        current.pop();
+        Memory(current);
+        console.log(current)
+    }
+
+</script>
+</body>
+</html>

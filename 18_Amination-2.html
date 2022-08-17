@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 1000px;
+            height: 100vh;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .one{
+            width: 200px;
+            animation: toRight 1.5s ;
+        }
+        .two{
+            width: 500px;
+            /* animation: toLeft 1.5s; */
+        }
+        .two h1{
+            animation: toLeft 1.5s;
+            margin-bottom: 10px;
+        }   
+        .two p{
+            animation: toLeft 2s;
+        }
+        #heart{
+            width: 100px;
+            position: fixed;
+            bottom: 100px;
+            margin: auto;
+            left: 0;
+            right: 0;
+            animation: Shake 0.5s infinite alternate;
+        }
+
+        @keyframes toRight {
+            from{
+                transform: translateX(-550px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+        @keyframes toLeft {
+            from{
+                transform: translateX(550px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+
+        @keyframes Shake {
+            from{
+                transform: scale(1.2);
+            }
+            to{
+                transform: scale(1);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="one">
+            <img src="./Chit-img/Chit (1).jpeg" style="width: 100%;" alt="">
+        </div>
+        <div class="two">
+            <h1>Ei ThinZar Maung</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo dolorum placeat optio quidem itaque, reiciendis est illo consequatur ex alias maxime maiores fugiat officiis veritatis nobis ipsa nisi sint ad?
+            </p>
+        </div>
+    </div>
+    <img src="./img/heart.png" id="heart" alt="">
+</body>
+</html>

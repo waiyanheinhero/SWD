@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+
+    <h4>To Do List</h4>
+    <div class="todo">
+        <div class="add-box" id="addBox">
+            <input type="text" id="input">
+            <button id="addBtn" class="btn btn-add" onclick="addList()">Add</button>
+        </div>
+        <ul class="list" id="list">
+            
+        </ul>
+    </div>
+
+    <script>
+    let minTextLength = 3;
+    let i = 1;
+
+    let input = document.getElementById("input");
+    let list = document.getElementById("list");
+
+    function textFilter(x){
+        if(x){
+            
+            if(x.length >= minTextLength){
+
+                return x;
+
+            }else{
+                alert("Min Text Length is 3");
+                return false;
+            }
+
+        }else{
+            alert("Input Text Empty");
+            return false;
+        }
+    }
+
+    function showListBackup(text){
+        list.innerHTML += `
+            <li class="list-item animate__animated animate__fadeInDown" id="list${i}">
+                <button class="btn del-btn" onclick='deleteList(${i})'>Delete</button>
+                <button class="btn edit-btn" onclick='editList(${i})'>Edit</button>
+                <span id="listText${i}">${text}</span>
+            </li>
+        `;
+        i++;
+    }
+
+    function showList(text){
+        let li = document.createElement("li")
+        let content = document.createTextNode(text);
+        li.appendChild(content);
+        li.classList = "animate__animated animate__fadeInDown";
+        list.appendChild(li)
+
+    }
+
+    function deleteList(listId){
+
+        let current = document.getElementById(`list${listId}`);
+        let currentText = document.getElementById(`listText${listId}`).innerHTML;
+        let deleteConfirm = confirm(`Are U Sure To Delete List '${currentText}'`);
+
+        if(deleteConfirm){
+            list.removeChild(current);
+        }else{
+            console.log("Delete Cancel");
+        }
+    }
+
+    function editList(listId){
+        let current = document.getElementById(`listText${listId}`);
+        let newText = prompt("Say Something",current.innerHTML);
+
+        if(textFilter(newText)){
+            current.innerHTML = newText;
+        }
+    
+    }
+    
+    
+
+    function addList() {
+        //get
+        let inputText = textFilter(input.value);
+
+        if(inputText){
+            //set
+            showList(inputText);
+            input.value = "";
+        }
+    }
+
+    input.addEventListener("keyup",function (e) {
+        if(e.keyCode == 13){
+            addList();
+        }
+    })
+
+    
+    </script>
+
+    
+</body>
+</html>

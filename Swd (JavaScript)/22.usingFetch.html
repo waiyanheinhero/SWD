@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch("https://newsapi.org/v2/everything?q=apple&from=2022-08-14&to=2022-08-14&sortBy=popularity&apiKey=6cc4d639f3e94f6f8a5118d7160ccd58")
+        .then(function(response){
+            console.log(response);
+            response.json();
+        })
+        .then(function(json){
+            console.log(json)
+        })
+        
+        
+
+    </script>
+</body>
+</html>

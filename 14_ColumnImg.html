@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=The+Nautigal:wght@700&display=swap');
+
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: 'Oswald', sans-serif;
+            }
+            .title{
+                color: #03afda;
+                margin: 30px auto;
+                text-align: center;
+                font-weight: bolder;
+                font-size: 3em;
+                display: flex;
+                justify-content: center;
+                
+                
+            }
+            .one{
+                animation: toRight 2s linear 0s infinite alternate;
+                
+            }
+            .two{
+                animation: toLeft 2s linear 0s infinite alternate;
+                
+            }
+
+            @keyframes toRight {
+                from{
+                    transform: translateX(-850px);
+                }
+                to{
+                    transform: translateX(0px);
+                }
+            }
+            @keyframes toLeft {
+                from{
+                    transform: translateX(850px);
+                }
+                to{
+                    transform: translateX(0px);
+                }
+            }
+
+
+            .gallery{
+                columns: 3 300px;
+                column-gap: 30px;
+                width: 1000px;
+                margin: auto;
+                margin-top: 20px;
+            }
+            .gallery img{
+                width: 100%;
+                margin-bottom: 30px;
+                border-radius: 5px;
+                transition: 0.5s;
+            }
+            .gallery img:hover{
+                filter: contrast(150%);
+            }
+
+            @media screen and (max-width: 1024px) {
+                .gallery{
+                    width: 100%;
+                }
+            }
+            @media screen and (max-width: 480px) {
+                .gallery{
+                    columns: 2 150px;
+                    column-gap: 15px;
+
+                }
+                .gallery img{
+                    margin-bottom: 15px;
+                }
+            }
+
+            .heart{
+                width: 100px;
+                display: inherit;
+                bottom: 100px;
+                margin: auto;
+                left: 0;
+                right: 0;
+                animation: Shake 0.5s infinite alternate;
+            }
+            @keyframes Shake {
+                from{
+                    transform: scale(1.2);
+                }
+                to{
+                    transform: scale(1);
+                }
+            }
+       
+    </style>
+</head>
+<body>
+
+    <div class="title">
+        <div style="color: pink;" class="one">Ei ThinZar</div>
+        <div class="two">Gallery</div>
+    </div>
+
+    <img src="./img/heart.png" class="heart" alt="">
+
+    <div class="gallery">
+        <img src="./Chit-img/Chit (1).jpeg" alt="">
+        <img src="./Chit-img/Chit (2).jpeg" alt="">
+        <img src="./Chit-img/Chit (3).jpeg" alt="">
+        <img src="./Chit-img/Chit (4).jpeg" alt="">
+        <img src="./Chit-img/Chit (5).jpeg" alt="">
+        <img src="./Chit-img/Chit (6).jpeg" alt="">
+        <img src="./Chit-img/Chit (7).jpeg" alt="">
+        <img src="./Chit-img/Chit (8).jpeg" alt="">
+        <img src="./Chit-img/Chit (9).jpeg" alt="">
+        <img src="./Chit-img/Chit (10).jpeg" alt="">
+        <img src="./Chit-img/Chit (11).jpeg" alt="">
+        <img src="./Chit-img/Chit (12).jpeg" alt="">
+    </div>
+
+    
+</body>
+</html>

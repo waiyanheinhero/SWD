@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let arr = ["x","y","z"]
+
+        let myObj = {
+            name : "Wai Yan Hein",
+            age : 26,
+            learn : function(){
+                return `My name is ${this.name}.I am ${this.age} year`;
+            }
+        }
+
+        class Me {
+            constructor(){
+                console.log("i am constructor")
+            }
+
+            static name = "Ronaldo";
+            
+            age = 36;
+            #gf = "Ei thinzar maung"; //private property
+
+            show(){
+                return `my sweet heart is ${this.#gf}`
+            }
+
+            learn = function(){
+                return `My name is ${this.name}.I am ${this.age} year`;
+            }
+        }
+
+        class Reg{
+            constructor(name,age,liveIn){
+                this.name = name;
+                this.age = age;
+                this.location = liveIn;
+
+            }
+
+            //propotype
+            get showBDY(){
+                let current = new Date().getFullYear();
+                return (current- this.age)
+
+            }
+
+            
+            learn(){
+                    return `My name is ${this.name}.I am ${this.age} year`;
+                }
+        }
+
+        let reg1 = new Reg("mgmg","12","Yangon");
+        let reg2 = new Reg("kyaw","56","Bago")
+
+
+
+
+
+    </script>
+</body>
+</html>

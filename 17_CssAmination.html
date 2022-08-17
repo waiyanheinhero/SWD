@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .obj{
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+            transition: 0.5s;
+            animation-name: first;
+            transform: translateX(150px);
+            /* animation-duration: 5s;
+            animation-delay: 2s;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            animation-timing-function: linear; */
+            animation: first 5s linear 2s 3 alternate;
+        }
+   
+
+        @keyframes first {
+            from{
+                transform: translateX(0px);
+            }
+            to{
+                transform: translateX(150px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="obj"></div>
+
+
+</body>
+</html>

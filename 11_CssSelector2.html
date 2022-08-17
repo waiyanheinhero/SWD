@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'The Nautigal', cursive;
+        }
+        .home{
+            background-image: url(img/4.jpg);
+            height: 80vh;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            padding: 0 150px;
+            position: relative;
+            z-index: -2;
+        }
+
+        .home::before{
+            content: "";
+            position: absolute;
+            background-image: radial-gradient(circle at 53% 25%, rgba(203, 203, 203,0.04) 0%, rgba(203, 203, 203,0.04) 36%,transparent 36%, transparent 100%),radial-gradient(circle at 48% 27%, rgba(22, 22, 22,0.04) 0%, rgba(22, 22, 22,0.04) 45%,transparent 45%, transparent 100%),radial-gradient(circle at 65% 50%, rgba(219, 219, 219,0.04) 0%, rgba(219, 219, 219,0.04) 61%,transparent 61%, transparent 100%),radial-gradient(circle at 78% 82%, rgba(229, 229, 229,0.04) 0%, rgba(229, 229, 229,0.04) 26%,transparent 26%, transparent 100%),radial-gradient(circle at 99% 75%, rgba(96, 96, 96,0.04) 0%, rgba(96, 96, 96,0.04) 31%,transparent 31%, transparent 100%),radial-gradient(circle at 17% 28%, rgba(188, 188, 188,0.04) 0%, rgba(188, 188, 188,0.04) 15%,transparent 15%, transparent 100%),radial-gradient(circle at 19% 19%, rgba(25, 25, 25,0.04) 0%, rgba(25, 25, 25,0.04) 68%,transparent 68%, transparent 100%),radial-gradient(circle at 35% 23%, rgba(31, 31, 31,0.04) 0%, rgba(31, 31, 31,0.04) 18%,transparent 18%, transparent 100%),linear-gradient(90deg, rgb(138, 193, 238),rgb(20, 21, 171));
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        .home-content{
+            width: 350px;
+        }
+        .home-content-title{
+            color: #ffffff;
+        }
+        .home-content-para{
+            color: #ffffaa;
+        }
+        .up{
+            width: 60px;
+            height: 50px;
+            background: #d5d5dd;
+            border-radius: 50%;
+            text-align: center;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <section class="home" id="home">
+       <div class="home-content">
+            <h1 class="home-content-title">Hello Testing</h1>
+            <p class="home-content-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro nemo quaerat molestiae incidunt expedita, 
+                labore vitae explicabo quasi, dolores quas error blanditiis eveniet, amet itaque tempore? Corrupti culpa eligendi inventore.</p>
+       </div>
+    </section>
+    <section style="height: 100vh;"> 
+
+    </section>
+   <a href="#home"> <img src="./img/5.png" alt="" class="up" width="50px"></a>
+</body>
+</html>

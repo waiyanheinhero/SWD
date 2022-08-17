@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #outer{
+            width: 500px;
+            margin: 100px auto;
+            background-color: #eee;
+            padding: 50px;
+        }
+        #mid{
+            padding: 50px;
+            background-color: #dddd;
+        }
+        #inner{
+            padding: 50px;
+            background-color: #ccc;
+        }
+        div:hover{
+            border: 1px solid black;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+
+    <!-- <div id="outer" onclick="run('1outer')">
+            
+        <div id="mid" onclick="run('2mid')">
+                
+            <div id="inner" onclick="run('3inner')">
+                   
+            </div>
+        </div>
+    </div> -->
+
+    
+    <div id="outer">
+            
+        <div id="mid">
+                
+            <div id="inner">
+                   
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        function run(x){
+            console.log(`I am ${x} Layer`);
+        }
+
+        document.getElementById("outer").addEventListener("click",function(){
+            run("1 outer")
+        },true)
+        document.getElementById("mid").addEventListener("click",function(){
+            run("2 mid")
+        },true)
+        document.getElementById("inner").addEventListener("click",function(){
+            run("3 inner")
+        },true)
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #f5f5f5;
+        }
+
+        heard{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 1100px;
+            margin: 10px auto;
+            padding: 10px;
+            border: 1px solid gray;
+
+
+        }
+        heard:hover{
+            box-shadow: 0 0 1px rgba(0,0,0,0.5) ;
+        }
+
+        heard a{
+            text-decoration: none;
+            color: orange;
+
+        }
+        .brand a{
+            font-size: 1.5rem;
+            font-weight: bolder;
+        }
+
+        .nav-list li{
+            list-style-type: none;
+            display: inline-block;
+            background-color: gray;
+            padding: 10px 15px;
+            width: 120px;
+            text-align: center;
+
+        }
+        .nav-list {
+            padding: 0;
+        }
+
+        .nav{
+
+        }
+        .btn{
+            display: none;
+        }
+
+        @media  screen and (max-width: 480px){
+            heard{
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            .btn{
+                display: block;
+                background-color: gray;
+                padding: 10px 15px;
+                width: 50px;
+                text-align: center;
+            }
+            .nav{
+                display: none;
+                width: 100%;
+            }
+            .nav-list li{
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .nav-list li:first-child{
+                margin-top: 10px;
+            }
+        }
+
+        .show-nav{
+            display: block;
+            animation: showSlow 0.5s;
+            position: absolute;
+            z-index: -1;
+            top: 70px;
+        }
+        
+        @keyframes showSlow {
+            0%{
+                transform: translateY(-100px);
+            }100%{
+                transform: translateY(0px);
+                         }
+        }
+
+    </style>
+</head>
+<body>
+
+    <heard>
+
+        <div class="brand">
+            <a href="">FaceBook</a>
+        </div>
+
+        <button class="btn">
+            M
+        </button>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Service</a>
+                </li>
+                <li>
+                    <a href="">Gallery</a>
+                </li>
+                <li>
+                    <a href="">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+
+
+    </heard>
+
+    <script>
+
+        let nav = document.querySelector(".nav");
+        let btn = document.querySelector(".btn")
+
+
+        btn.addEventListener("click",()=>{
+            nav.classList.toggle("show-nav")
+        })
+
+
+    </script>
+
+
+</body>
+</html>

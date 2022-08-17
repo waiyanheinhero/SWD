@@ -1,0 +1,231 @@
+:root{
+    --primary : #2d88ff;
+    --dark : #18191a;
+    --sime-dark : #242526;
+    --sof-dark : #3a3b3c;
+    --danger : #f02849;
+    --success : #44b960;
+    --warning : #dda728;
+    --text : #b7b9bd;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'The Nautigal', cursive;
+    color: var(--text);
+}
+
+
+
+body{
+    background-color: var(--dark);
+}
+
+.nav{
+    background-color: var(--sime-dark);
+    height: 60px;
+    display: flex;
+}
+.left{
+    width: 25%;
+}
+.left-box{
+    display: flex;
+    padding: 10px;
+}
+.logo{
+    width: 60px;
+}
+.search-box{
+    background-color: var(--sof-dark);
+    border-radius: 100px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+.search-box .fas{
+    margin-right: 10px;
+}
+.search-input{
+    color: var(--text);
+    background-color: var(--sof-dark);
+    border: none;
+    width: 120px;
+}
+.search-input:focus{
+    outline: none;
+}
+
+/* center */
+.center{
+    width: 50%;
+}
+.center-box{
+    display: flex;
+    justify-content: center;
+}
+.center-link{
+    width: 130px;
+    display: flex;
+    padding: 10px;
+    margin: 0 5px;
+    align-items: center;
+    justify-content: center;
+    border-bottom-color: 10px solid var(--sime-dark);
+    margin-top: 10px;
+    position: relative;
+    transition: 0.5s;
+}
+.center-link:hover{
+    background-color: var(--sof-dark);
+    border-radius: 10px;
+}
+.center-link .active{
+    border-bottom-color: var(--primary);
+    color: var(--primary);
+}
+.center-link.active .center-icon{
+    color: var(--primary);
+}
+.center-icon{
+    font-size: 25px;
+}
+.center-link .noti{
+    background: red;
+    padding: 3px;
+    border-radius: 18px;
+    font-size: 10px;
+    position: absolute;
+    top: -8px;
+    right: 5px;
+    position: relative;
+}
+.right{
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+}
+.right-box{
+    display: flex;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 5px 10px;
+    transition: 0.5s;
+}
+.profile:hover{
+    background-color: var(--sof-dark);
+    
+}
+.profile-photo{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+.profile-text{
+    color: var(--text);
+    font-weight: bolder;
+
+}
+.noti-box{
+    display: flex;
+}
+.right-notification{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sof-dark);
+    margin: 10px 5px;
+    border-radius: 50%;
+}
+
+.fb-body{
+    display: flex;
+}
+
+.left-side{
+    width: 25%;
+}
+.new-feed{
+    width: 50%;
+}
+.my-day-list{
+    margin-top: 20px;
+    display: flex;
+}
+.myday-item{
+    margin-right: 10px;
+}
+.myday{
+    width: 125px;
+    height: 250px;
+    overflow: hidden;
+    background-size: 150%;
+    background-position: center;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.myday-owner{
+    width: 35px;
+    height: 35px;
+    background:var(--sof-dark);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myday-ownerimg{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-size: 100%;
+    background-position: center;
+}
+.myday-text{
+
+    bottom: 10px;
+    color: var(--text);
+    font-weight: bolder;
+}
+.myday-img{
+    width: 100%;
+}
+.scroll-myday{
+    width: 50px;
+    height: 50px;
+    background-color:var(--sof-dark);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 333px;
+    top: 170px;
+    z-index: 2;
+}
+.add-post{
+
+}
+.post-list{
+
+}
+.chat-box{
+    width: 25%;
+}

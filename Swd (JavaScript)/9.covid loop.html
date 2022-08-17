@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            }
+        tr,td {
+            padding: 10px 15px;
+            border: 1px solid black;
+        }
+        .dark{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Global</h1>
+    <table>
+        <tbody id="tb">
+
+        </tbody>
+    </table>
+    
+    <h1>Country Table</h1>
+    <table>
+        <thead>
+            <td>NO</td>
+            <td>Country</td>
+            <td>Total</td>
+            <td>Date</td>
+
+        </thead>
+        <tbody id="ctb">
+           
+        </tbody>
+    </table>
+
+    <script src="./js/covid.js"></script>     
+    
+    <script>
+
+        let global = data.Global;
+        let tbody = document.getElementById("tb");
+        let country = data.Countries;
+        let ctb = document.getElementById("ctb");
+
+        for(x in global){
+            // console.log(x);
+            tbody.innerHTML +=
+            
+            `<tr>
+                <td>${x}</td>
+                <td>${global[x]}</td>    
+
+            </tr>`
+        };
+
+
+        // let i = 1;      
+        // for(x of country){
+        //     // console.log(x);
+        //     ctb.innerHTML += `
+        //     <tr>
+        //         <td>${i}</td>
+        //         <td>${x.Country}</td>
+        //         <td>${x.TotalConfirmed}</td>
+        //         <td>${x.Date}</td>
+        //     </tr>`;
+
+        //     i++
+        // }
+
+        country.map((el,index)=> {
+            // console.log(el)
+                 ctb.innerHTML += `
+            <tr>
+                <td>${index}</td>
+                <td>${el.Country}</td>
+                <td>${el.TotalConfirmed}</td>
+                <td>${el.Date}</td>
+            </tr>`;
+
+        })
+
+    </script>
+
+ 
+</body>
+</html>

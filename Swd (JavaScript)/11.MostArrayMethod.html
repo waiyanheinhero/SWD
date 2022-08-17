@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        let arr = ["apple","orange","banana","mango","papaya","Sweet-sop"];
+        let numArr = [15,78,15,10.5,-5,3.5,77];
+        let apiData = [
+            {id:1,name:"mgmg",age:"14",room:"a",donate:350},
+            {id:2,name:"kyawkyaw",age:"19",room:"b",donate:750},
+            {id:3,name:"soesoe",age:"24",room:"c",donate:300},
+            {id:4,name:"myamya",age:"35",room:"d",donate:850},
+            {id:5,name:"thidar",age:"20",room:"a",donate:1550},
+        ]
+
+
+                    // let arr2 = apiData.map(function(el,index){
+                    //     return {name: el.name,age: el.age}
+                    // })
+
+
+                    // // let arr2 = apiData.map((el)=> el.name)
+                    //     let arr2 = arr.filter(function(el){
+                    //         if(el.length == 5){
+                    //             return (el+"-"+el.length)
+                    //         }
+                            
+                    //     })
+
+                    // let arr2 = arr.filter((el)=>el.length == 5);
+
+                    // let arr2 = apiData.filter(function(el){
+                    //     if(el.room == "a"){
+                    //         return el;
+                    //     }
+                    // })
+
+                // let arr2 = apiData.filter((el) => el.room == "a" || el.room == "b").map((el)=> el.name);
+                    
+                // let arr2 = numArr.reduce(function(x,y){
+                //     return x+y;
+                // })
+
+                // let arr2 = apiData.reduce((x,y)=>x+y.donate ,0);
+
+                let arr2 = apiData.filter((el)=>el.room === "a").map((el)=>el.donate).reduce((x,y)=>x+y)
+
+        console.log(arr2)
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        tr td {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+        }
+        .dark{
+            background-color: black;
+        }
+
+
+    </style>
+</head>
+<body>
+<table>
+    <tbody id="tb"></tbody>
+</table>
+
+
+
+<script>
+
+    let tb = document.getElementById("tb");
+
+    for(let i=1;i<=8;i++){
+        let td = "";
+
+        if(i%2 == 0){
+            for(let x=1;x<=8;x++){
+                if(x%2 == 0){
+                    td += `<td class="dark"></td>`;
+                }else {
+                    td += `<td></td>`
+                }
+
+            }
+        }else{
+            for(let x=1;x<=8;x++){
+                if(x%2 == 0){
+                    td += `<td></td>`;
+                }else {
+                    td += `<td class="dark"></td>`
+                }
+
+            }
+        }
+
+
+        tb.innerHTML += `<tr>${td}</tr>`
+    }
+
+
+        // for(let i=1;i<=5;i++){
+        //     // console.log(i)
+        //     let star = ""
+        //     for(let x=1;x<=i;x++){
+        //         console.log(x)
+        //         star += "*"
+        //     }
+        //     console.log(star)
+        // }
+        //
+        // for(let i=5;i>=1;i--){
+        //     let star = ""
+        //     for(let x=1;x<=i;x++){
+        //         console.log(x)
+        //         star += "* "
+        //     }
+        //     console.log(star)
+        // }
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

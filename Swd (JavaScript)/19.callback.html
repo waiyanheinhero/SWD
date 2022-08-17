@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // function a1(){
+        //     console.log("i am a1");
+        //         function b1(){
+        //             console.log("i am b1")
+        //         }
+        //     b1()
+        // }
+
+        // function aa(x,y){
+        //     let z = x+y;
+        //      function bb(){
+        //         console.log("result---"+z)
+        //      }
+        //     bb() 
+        // }
+
+        // function call(g){
+        //     let input = `i am input`+"-"+g;
+        //     return function(){
+        //         console.log(input)
+        //     }
+        // }
+
+        function bb(x){
+            console.log("this is finalresult"+x)
+        }
+
+        function aa(x,y,callback){
+            let z = x+y;
+            callback(z)
+        };
+
+        aa(2,2,bb)
+
+
+    </script>
+</body>
+</html>
