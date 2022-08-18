@@ -28,6 +28,15 @@
             display: none;
         }
 
+        #gallery{
+         
+
+        }
+        .gallery-img{
+            margin: 0 5px;
+            border-radius: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -36,14 +45,11 @@
         <img src="../img/photo-upload.png"  alt="">
     </div>
 
-    
-        <input type="file" id="upload" accept="image/*">
-
+        <input type="file" id="upload" accept="image/*" multiple>
         <br>
-
         <img src="" height="200" alt="" class="img">
     
-   
+        <div id="gallery"></div>
 
 
     <script>
@@ -51,26 +57,39 @@
         let upload = document.getElementById("upload");
         const preview = document.querySelector(".img");
         let uploader = document.getElementById("upImg");
+        let gallery = document.getElementById("gallery");
 
 
         upload.addEventListener("change",function(){
-            let photo = this.files[0];
-            const reader = new FileReader();
+            let photo = this.files;
+            for(let i=0;i<photo.length;i++){
+                
+                const reader = new FileReader();
 
-            reader.addEventListener("load",function(){
-                preview.src = reader.result
-                console.log(reader.result);
+                reader.addEventListener("load",function(){
+                    // preview.src = reader.result;
+                    addGallery(reader.result)
+                    console.log(reader.result);
             })
 
-            reader.readAsDataURL(photo);
-            console.log(photo);
-        })
+            reader.readAsDataURL(photo[i]);
+            console.log(photo[i]);
+            }
+            
+        });
 
 
         uploader.addEventListener("click",function(){
             upload.click();
             
-        })
+        });
+
+        function addGallery(src){
+            let img = new Image(100,100);
+            img.src = src;
+            img.classList = "gallery-img"
+            gallery.appendChild(img)
+        }
         
     </script>
 </body>
