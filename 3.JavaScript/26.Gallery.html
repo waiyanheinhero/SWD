@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+
+        #upImg{
+            background-color:#eeeeee;
+            width: 100px;
+            padding: 50px;
+            border-radius: 30px;
+        }
+        #upImg:hover{
+            box-shadow: 5px 5px 0.5px black;
+            transition: 0.5s;
+            cursor: pointer;
+            
+        }
+        
+        #upImg img{
+            width: 100px;
+        }
+
+        #upload{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="upImg">
+        <img src="../img/photo-upload.png"  alt="">
+    </div>
+
+    
+        <input type="file" id="upload" accept="image/*">
+
+        <br>
+
+        <img src="" height="200" alt="" class="img">
+    
+   
+
+
+    <script>
+
+        let upload = document.getElementById("upload");
+        const preview = document.querySelector(".img");
+        let uploader = document.getElementById("upImg");
+
+
+        upload.addEventListener("change",function(){
+            let photo = this.files[0];
+            const reader = new FileReader();
+
+            reader.addEventListener("load",function(){
+                preview.src = reader.result
+                console.log(reader.result);
+            })
+
+            reader.readAsDataURL(photo);
+            console.log(photo);
+        })
+
+
+        uploader.addEventListener("click",function(){
+            upload.click();
+            
+        })
+        
+    </script>
+</body>
+</html>
