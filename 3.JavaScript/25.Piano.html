@@ -63,7 +63,30 @@
         current.pop();
         Memory(current);
         console.log(current)
-    }
+    };
+
+
+    document.addEventListener("keyup",function(e){
+        let swit = e.keyCode;
+        if(swit == 65){
+            run('C4')
+        }else if(swit == 83){
+            run('D4')
+        }else if(swit == 68){
+            run('E4')
+        }else if(swit == 70){
+            run('F4')
+        }else if(swit == 74){
+            run('G4')
+        }else if(swit == 75){
+            run('A4')
+        }else if(swit == 76){
+            run('B4')
+        }else if(swit == 108){
+            run('C5')
+        }
+        console.log(e.keyCode)
+    })
 
 </script>
 </body>
