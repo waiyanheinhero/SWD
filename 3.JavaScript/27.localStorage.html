@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do LocalStorage</title>
+</head>
+<body>
+    
+    <input type="text" id="input">
+    <ul id="list"></ul>
+
+
+    <script>
+        let input = document.getElementById("input");
+        let list = document.getElementById("list");
+
+
+        let id = 1;
+        if(localStorage.length>0){
+            id = localStorage.length++;
+        }
+
+
+        function save(x){
+            localStorage.setItem(id,x);
+            id++;
+        };
+
+        function showList(){
+            for(let i=1;i<=localStorage.length;i++){
+                addList(localStorage.getItem(i))
+            }
+        }
+
+        function addList(x){
+            let li = document.createElement("li");
+            let text = document.createTextNode(x);
+            li.appendChild(text);
+            list.append(li)
+        }
+
+        input.addEventListener("keyup",function(event){
+            if(event.keyCode == 13){
+                let note = input.value;
+                addList(note);
+                save(note)
+                input.value = ""
+                console.log(note);
+
+            }
+        })
+
+        showList()
+
+    </script>
+
+</body>
+</html>
