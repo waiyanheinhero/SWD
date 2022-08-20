@@ -28,6 +28,16 @@
             display: none;
         }
 
+
+
+        #gallery{
+            width: 550px;
+            border: 1px solid;
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+
         .gallery-img{
             margin: 0 5px;
             border-radius: 10px;
@@ -58,6 +68,7 @@
 
         upload.addEventListener("change",function(){
             let photo = this.files;
+
             for(let i=0;i<photo.length;i++){
                 
                 const reader = new FileReader();

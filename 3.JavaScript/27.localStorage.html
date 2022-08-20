@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do LocalStorage</title>
+</head>
+<body>
+    
+    <h1>LocalStorage</h1>
+    
+    <input type="text" id="input">
+    <ul id="list"></ul>
+
+
+    <script>
+
+        let input = document.getElementById("input");
+        let list = document.getElementById("list");
+        let k = Object.keys(localStorage);
+        k.sort();
+
+
+        let id = 1;
+        if(localStorage.length>0){
+            id = Number(k[k.length-1])+1;
+        }
+
+
+        function save(x){
+            localStorage.setItem(id,x);
+            id++;
+        };
+
+        // function showList(){
+        //     for(let i=1;i<=localStorage.length;i++){
+        //         addList(localStorage.getItem(i))
+        //     }
+        // }
+
+        function showList(){
+            k.map(function (el){
+                addList(localStorage.getItem(el),el)
+            })
+            console.log(k)
+        }
+
+        function addList(x,y){
+            let li = document.createElement("li");
+            let text = document.createTextNode("-"+ x);
+            let btn = document.createElement("button");
+            let btnText = document.createTextNode("Delete");
+            btn.append(btnText);
+            btn.setAttribute("onclick","del("+y+")");
+            li.setAttribute("id","list-"+y)
+            li.appendChild(btn);
+            li.appendChild(text);
+            list.append(li);
+        }
+
+        input.addEventListener("keyup",function(event){
+            if(event.keyCode == 13){
+                let note = input.value;
+                addList(note);
+                save(note)
+                input.value = ""
+                console.log(note);
+
+            }
+        });
+
+        function del(x){
+            localStorage.removeItem(x);
+            let current = document.getElementById("list-"+x);
+            current.remove();
+        }
+
+        showList();
+
+
+
+        let me = {
+            name: "Wai Yan Hein",
+            age: 26,
+            job: "Web Developer",
+            liveIn: "Yangon",
+        }
+
+    </script>
+
+</body>
+</html>
