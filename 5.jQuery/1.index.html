@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="test">Hello</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi cumque eaque ipsa mollitia nulla numquam recusandae veniam? Consequatur natus optio totam! Accusantium cumque dignissimos inventore nihil provident quisquam quo similique sint ullam voluptates. Animi atque distinctio expedita hic laudantium libero natus officia quae quidem quod suscipit unde, velit. Iusto, sed?
+    </p>
+    <span class="text-1">Wai Yan Hein</span>
+
+<script src="js/jquery.js"></script>
+<script>
+    document.getElementById("test").innerHTML = "San Kyi Tar Pr";
+
+    //$("selector").action()
+
+    $("#test").html("Min Ga Lar Par").click(function (){
+        $(this).hide(1000,function (){
+            console.log("This is Hide")
+        })
+    });
+
+    // $("#test").click(function (){
+    //     $(this).hide(1000)
+    // })
+
+    $("p").click(function (){
+        $(this).hide()
+    })
+
+    $(".text-1").hide(3000)
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <p id="p" title="san kyi tar par">
+        This is a P tag
+    </p>
+
+    <input type="text" id="input">
+    <select name="" id="select">
+        <option value="mm">MM</option>
+        <option value="cm">CM</option>
+        <option value="jp">JP</option>
+    </select>
+    <br>
+    <br>
+    <button id="btn">Click Me</button>
+
+    <script src="js/jquery.js"></script>
+    <script>
+
+        $("#btn").click(function(){
+            // let data = $("#p").html() // innerHTML လိုမျိုး
+            let data = $("#select").val(); //value ကို ယူတာ
+            let attr = $("#p").attr("title")
+            console.log(data)
+            console.log(attr)
+        })
+
+
+
+
+    </script>
+</body>
+</html>

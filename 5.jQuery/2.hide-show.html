@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .obj{
+            width: 300px;
+            height: 100px;
+            background-color: gray;
+            margin-top: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <button class="hideBtn">Hide</button>
+    <button class="showBtn">Show</button>
+    <button class="toggleBtn">Toggle</button>
+    <button class="to">Fade To</button>
+
+    <div class="obj"></div>
+
+
+<script src="js/jquery.js"></script>
+<script>
+
+//    $(".hideBtn").click(function (){
+//        $(".obj").hide(1000)
+//    });
+//    $(".showBtn").click(function (){
+//        $(".obj").show(1000)
+//    });
+//    $(".toggleBtn").click(function () {
+//        $(".obj").toggle(1000)
+//    })
+
+   // $(".hideBtn").click(function (){
+   //     $(".obj").fadeOut(1000)
+   // });
+   // $(".showBtn").click(function (){
+   //     $(".obj").fadeIn(1000)
+   // });
+   // $(".toggleBtn").click(function () {
+   //     $(".obj").fadeToggle(1000)
+   // })
+
+    $(".to").click(function (){
+        $(".obj").fadeTo(1000,0.5,function (){
+            console.log("I have finished fadeto")
+        })
+    });
+
+    $(".hideBtn").click(function (){
+        $(".obj").slideUp(1000,function (){
+            console.log("I have finished slideup")
+        })
+    });
+    $(".showBtn").click(function (){
+        $(".obj").slideDown(1000)
+    });
+    $(".toggleBtn").click(function () {
+        $(".obj").slideToggle(1000)
+    })
+
+
+
+</script>
+</body>
+</html>
