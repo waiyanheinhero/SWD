@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: yellow;
+            width: 300px;
+            height: 200px;
+            
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn-before">Before</button>
+    <button id="btn-after">After</button>
+
+    <br>
+    
+    <ol id="list">
+        <li id="mm">mm</li>
+        <li id="ch">ch</li>
+        <li id="jp">jp</li>
+    </ol>
+
+    <br>
+
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, reprehenderit.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus quasi voluptatem veritatis tempora aperiam! Sunt.</p>
+    </div>
+    <br>
+    <button id="remove">Remove div element</button>
+    <button id="empty">Empty div element</button>
+
+
+
+    
+<script src="./js/jquery.js"></script>
+<script>
+
+    //before (ul ရဲ့အပေါ်ကနေ Element ထပ်ထည့်တာ)
+    //after (ul ရဲ့အောက်ကနေ Element ထပ်ထည့်တာ)
+
+    $("#btn-before").click(function(){
+        $("#list").before(`<h1>I am Before</h1>`)
+    })
+
+    $("#btn-after").click(function(){
+        $("#list").after(`<h1>I am After</h1>`)
+    })
+
+    //remove က div တစ်ခုလုံးဖျက်ချသွားမယ်
+    //empty က p အကုန်လုံးဖျက်ချသွားမယ်
+
+
+    $("#remove").click(function(){
+        $(".box").remove()
+    })
+
+    $("#empty").click(function(){
+        $(".box").empty()
+    })
+
+</script>
+
+</body>
+</html>

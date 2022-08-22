@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #p{
+            color: pink;
+        } */
+
+        .forText{
+            color: red;
+            font-size: 3em;
+            font-weight: bolder;
+        }
+        .one{
+            font-size: 4em;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <p id="p" class="one two three">Min Ga Lar Par</p>
+    <button id="change">Change Click</button>
+
+<script src="./js/jquery.js"></script>
+<script>
+
+    // $("#change").click(function(){
+    //     $("p").css({
+    //         color: "blue",
+    //         fontSize: "2em",
+    //     });
+    // })
+
+    // $("#change").click(function(){
+    //     let p = $("p").css("color");
+    //     console.log(p)
+    // })
+
+    $("#change").click(function(){
+        let p = $("p").addClass("forText")     // class ထည့်တာ
+    })
+
+    $("#change").click(function(){
+        let p = $("p").removeClass("one")     // removeclass ထည့်တာ
+    })
+
+    $("#change").click(function(){
+        let p = $("p").toggleClass("two")     // toggleclass ထည့်တာ
+    })
+
+    $("#change").click(function(){
+        let p = $("p").width()
+        console.log(p)
+    })
+
+</script>
+</body>
+</html>

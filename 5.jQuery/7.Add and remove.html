@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Add Text</p>
+
+    <ol id="list">
+        <li id="mm">mm</li>
+        <li id="ch">ch</li>
+        <li id="jp">jp</li>
+    </ol>
+
+    <button id="btn">Add List</button>
+    <button id="btn-text">Add Text</button>
+
+<script src="./js/jquery.js"></script>
+<script>
+
+    //append()နောက်ကနေထည့်တာ and prepend()ရှေ့ကနေထည့်တာ --> new Element(child) တွေထပ်ထည့်တာ
+    
+    // $("#btn").click(function(){
+    //     $("#list").append(`<li>UK</li>`)
+    // })
+
+    // $("#btn-text").click(function(){
+    //     $("p").append("Yangon")
+    //     $("p").append("Bago")
+    // })
+
+        $("#list").prepend(`<li>Uk</li>`)
+
+
+</script>
+
+</body>
+</html>
