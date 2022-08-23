@@ -36,7 +36,7 @@
 }
 
 .app{
-    width: 700px;
+    width: 777px;
     margin: 100px auto;
 }
 .output{
@@ -82,7 +82,13 @@
     width: 100%;
     padding: 10px;
     border-radius: 7px;
-    border: 1px solid var(--secondary)
+    border: 1px solid var(--secondary);
+}
+.input:focus,.from:focus,.to:focus{
+    outline: none;
+}
+.input{
+    text-align: right;
 }
 .calc-btn button{
     width: 100%;
@@ -97,6 +103,24 @@
     text-transform: uppercase;
     cursor: pointer;
 }
-.calc-btn button:hover{
+.calc-btn button:active{
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+input::-webkit-outer-placeholder,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+select::-ms-expand{_display: none;}
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+@-moz-document url-prefix(){
+    .ui-select{border: 1px solid #CCC;border-radius: 4px;
+    box-sizing: border-box;position: relative;overflow: hidden;}
+    .ui-select select{width: 110%;background-position: right 30px center
+    !important;border: none !important;}
 }

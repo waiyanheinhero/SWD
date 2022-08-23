@@ -47,27 +47,27 @@
 
         <div class="diver"></div>
 
-        <div class="calc">
+        <form class="calc" id="calc">
             <div class="input-container container">
                 <label for="">Input</label>
-                <input type="number" class="input">              
+                <input type="number" class="input" id="input" placeholder="0.00" autofocus required min="1">
             </div>
             <div class="from-container container">
                 <label for="">From</label>
-                <select name="" id="from" class="from">
-                    
+                <select name="" id="from" class="from" required >
+                    <option value="">Select Currency</option>
                 </select>        
             </div>
             <div class="to-container container">
                 <label for="">To</label>
-                <select name="" id="to" class="to">
+                <select name="" id="to" class="to" required >
                  
                 </select>         
             </div>
             <div class="calc-btn">
                 <button>Calculator</button>
             </div>
-        </div>
+        </form>
 
     
    </section>
