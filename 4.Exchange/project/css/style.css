@@ -6,6 +6,7 @@
     --secondary: #707070;   
     --light: #fff;
     --dark: #000;
+    --bg: #f2f2f2;
 }
 
 
@@ -54,6 +55,7 @@
 .brand{
     margin-left: 10px;
     font-size: 30px;
+    font-weight: bolder;
 }
 .result-container{
     display: flex;
@@ -77,6 +79,8 @@
 .container label{
     display: block;
     margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bolder;
 }
 .input,.from,.to{
     width: 100%;
@@ -98,7 +102,7 @@
     border: 1px solid var(--primary);
     background-color: var(--primary);
     color: var(--light);
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bolder;
     text-transform: uppercase;
     cursor: pointer;
@@ -124,3 +128,26 @@ select{
     .ui-select select{width: 110%;background-position: right 30px center
     !important;border: none !important;}
 }
+
+.history-table{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .history-table td,.history-table th {
+    padding: 8px;
+  }
+  
+  .history-table tr:nth-child(even){background-color:var(--bg)}
+  
+  .history-table tr:hover {background-color:var(--primary);}
+  
+  .history-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--primary);
+    color: white;
+    font-size: 25px;
+  }
