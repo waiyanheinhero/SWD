@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="icon" href="./img/logo.png" type="image/icon type">
         <!-- Primary Meta Tags -->
     <title>MMS-Exchange</title>
     <meta name="title" content="MMS-Exchange">
@@ -29,11 +29,12 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./vendor/fontawesome/css/all.css">
     <link rel="stylesheet" href="./vendor/fontawesome/animate-it/animate.min.css">
+    <link rel="stylesheet" href="./css/night.css">
 </head>
 <body>
     
 
-   <section class="app">
+   <section class="app  animate__animated animate__backInDown">
 
         <div class="output">
             <div class="brand-container">
@@ -69,18 +70,28 @@
             </div>
         </form>
 
+
     
    </section>
 
+        <div class="history-container">
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody id="history-list">
+                  
+                </tbody>
+            </table>
+        </div>
+</section>
 
-
-
-
-
-
-
-
-
+<button class="moodChange animate__animated animate__backInUp" onclick="changeMood()"><i class="fa-solid fa-moon"></i></button>
 
 
 

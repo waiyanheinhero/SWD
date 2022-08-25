@@ -1,0 +1,212 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap');
+
+:root{
+    --primary: #28c7fa;
+    --secondary: #707070;   
+    --light: #fff;
+    --dark: #000;
+    --bg: #f2f2f2;
+}
+
+
+@font-face {
+    font-family: "mm";
+    font-weight: normal;
+    src: url(../font/Pyidaungsu-1.8.3_Regular.ttf);
+}
+@font-face {
+    font-family: "mm";
+    font-weight: bold;
+    src: url(../font/Pyidaungsu-1.8.3_Bold.ttf);
+}
+.mm{
+    font-family: "mm";
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+.diver{
+    background: var(--secondary);
+    height: 5px;
+}
+
+.app{
+    width: 777px;
+    margin: 100px auto;
+}
+.output{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.brand-container{
+    display: flex;
+    align-items: self-end;
+}
+.logo{
+    width: 50px;
+}
+.brand{
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.result-container{
+    display: flex;
+    align-items: self-end;
+}
+.result{
+    font-size: 50px;
+}
+
+.calc{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.container{
+    width: 150px;
+}
+.container input{
+    width: 100%;
+}
+.container label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.input,.from,.to{
+    width: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid var(--secondary);
+}
+.input:focus,.from:focus,.to:focus{
+    outline: none;
+}
+.input{
+    text-align: right;
+}
+.calc-btn button{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--light);
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.calc-btn button:active{
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+input::-webkit-outer-placeholder,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+select::-ms-expand{_display: none;}
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+@-moz-document url-prefix(){
+    .ui-select{border: 1px solid #CCC;border-radius: 4px;
+    box-sizing: border-box;position: relative;overflow: hidden;}
+    .ui-select select{width: 110%;background-position: right 30px center
+    !important;border: none !important;}
+}
+
+.history-table{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .history-table td,.history-table th {
+    padding: 8px;
+  }
+  
+  .history-table tr{background-color:var(--bg)}
+  
+  .history-table tr:hover {background-color:var(--primary);}
+  
+  .history-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--primary);
+    color: white;
+    font-size: 25px;
+  }
+  #rowSpace td{
+    text-align: center;
+  }
+  
+  @media only screen and (max-width: 500px) {
+    body {
+      background-color: lightblue;
+    }
+    .app{
+        width: 96%;
+        margin: 30px auto;
+    }
+    .output{
+        flex-flow: column;
+       
+    }
+    .brand-container{
+        justify-content: left;
+        width: 100%;
+    }
+    .result-container{
+        width: 100%;
+        justify-content: right;
+    }
+    .calc{
+        flex-wrap: wrap;
+    }
+    .container{
+        width: 170px;
+    }
+    .input-container{
+       width: 100%;
+        margin-bottom: 10px;
+    }
+    .from-container,.to-container{
+        margin-bottom: 15px;
+    }
+    .calc-btn{
+        width: 100%;
+        
+    }
+    .history-table th{
+        text-align: center;
+    }
+  }
+
+  .moodChange{
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        background: var(--dark);
+        color: var(--light);
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        cursor: pointer;
+        
+  }
