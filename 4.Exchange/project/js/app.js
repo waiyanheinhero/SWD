@@ -65,6 +65,10 @@ calc.addEventListener("submit",function(event){
 // }
 
 function history(x){
+    let rowSpace = document.getElementById("rowSpace");
+    if(rowSpace){
+        rowSpace.remove();
+    }
 
     let tr = document.createElement("tr");
 
@@ -82,6 +86,8 @@ function history(x){
 (function(){
     if(localStorage.getItem("record")){
         historyList.innerHTML = localStorage.getItem("record");
+    }else{
+        historyList.innerHTML = `<tr id="rowSpace"><td colspan="4">There is no record</td></tr>`
     }
 })()
    
@@ -89,6 +95,9 @@ function store(){
     localStorage.setItem("record",historyList.innerHTML)
 }
 
+function changeMood(){
+    document.body.classList.toggle("night-mode")
+}
 
 
 

@@ -139,7 +139,7 @@ select{
     padding: 8px;
   }
   
-  .history-table tr:nth-child(even){background-color:var(--bg)}
+  .history-table tr{background-color:var(--bg)}
   
   .history-table tr:hover {background-color:var(--primary);}
   
@@ -150,4 +150,63 @@ select{
     background-color: var(--primary);
     color: white;
     font-size: 25px;
+  }
+  #rowSpace td{
+    text-align: center;
+  }
+  
+  @media only screen and (max-width: 500px) {
+    body {
+      background-color: lightblue;
+    }
+    .app{
+        width: 96%;
+        margin: 30px auto;
+    }
+    .output{
+        flex-flow: column;
+       
+    }
+    .brand-container{
+        justify-content: left;
+        width: 100%;
+    }
+    .result-container{
+        width: 100%;
+        justify-content: right;
+    }
+    .calc{
+        flex-wrap: wrap;
+    }
+    .container{
+        width: 170px;
+    }
+    .input-container{
+       width: 100%;
+        margin-bottom: 10px;
+    }
+    .from-container,.to-container{
+        margin-bottom: 15px;
+    }
+    .calc-btn{
+        width: 100%;
+        
+    }
+    .history-table th{
+        text-align: center;
+    }
+  }
+
+  .moodChange{
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        background: var(--dark);
+        color: var(--light);
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        cursor: pointer;
+        
   }
