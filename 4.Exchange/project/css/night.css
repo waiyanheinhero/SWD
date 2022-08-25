@@ -10,7 +10,7 @@
     background-color: var(--night-secondary-soft);
 }
 
-.night-mode .result{
+.night-mode .result,.container,.brand{
     color: var(--night-secondary);
 }
 .night-mode td{
