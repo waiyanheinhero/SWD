@@ -7,120 +7,221 @@
     <title>Facebook UI</title>
     <link rel="stylesheet" href="./Css/style.css">
     <link rel="stylesheet" href="./Swd/css/all.css">
+    <link rel="stylesheet" href="../6.Bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../4.Exchange/project/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../6.Bootstrap/node_modules/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
-    <nav class="nav">
-        <div class="left">
-            <div class="left-box">
-                <img src="../img/logo.png" class="logo" alt="">
-                <div class="search-box">
-                    <i class="fas fa-search"></i>
-                    <input type="text" class="search-input" placeholder="Search Facebook">
-                </div>
-            </div>
-        </div>
-
-        <div class="center">
-            <div class="center-box">
-                <div class="center-link active">
-                    <i class="fas fa-home center-icon"></i>
-                    
-                </div>
-                <div class="center-link">
-                    <i class="fas fa-flag center-icon"></i>
-                    <span class="noti">5</span>
-                </div><div class="center-link">
-                    <i class="fas fa-users center-icon"></i>
-                    <span class="noti">15</span>
-                </div><div class="center-link">
-                    <i class="fas fa-video center-icon"></i>
-                    <span class="noti">255</span>
-                </div><div class="center-link">
-                    <i class="fas fa-box center-icon"></i>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="right">
-            <div class="right-box">
-                <div class="profile">
-                    <img class="profile-photo" src="../Chit-img/Chit (1).jpeg" alt="">
-                    <span class="profile-text">Hero</span>
-                </div>
-                <div class="noti-box">
-                    <div class="right-notification">
-                        <i class="fas fa-plus"></i>
-                    </div>    
-                    <div class="right-notification">
-                        <i class="fas fa-comment"></i>
-                    </div>   
-                    <div class="right-notification">
-                        <i class="fas fa-bell"></i>
-                    </div>   
-                    <div class="right-notification">
-                        <i class="fas fa-angle-down"></i>
-                    </div>   
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
     
     <section class="fb-body">
-        <section class="left-side">
-            <h1>Facebook</h1>
-        </section>
-        <section class="new-feed">
-            <div class="my-day-list">
-                <div class="myday-item">
-                    <div class="myday" style="background-image: url(../img/pc-img/andras-vas-Bd7gNnWJBkU-unsplash.jpg);">
-                        <div class="myday-owner">
-                            <i class="fas fa-plus"></i>
+
+        <div class=" container-fluid">
+            <div class="nav row">
+                <div class="col-3">
+                    <div class="left">
+                        <div class="left-box">
+                            <img src="../img/logo.png" class="logo img-fluid" alt="">
+                            <div class="search-box">
+                                <i class="fas fa-search"></i>
+                                <input type="text" class="search-input" placeholder="Search Facebook">
+                            </div>
                         </div>
-                        <p class="myday-text">Add Your Story</p>
                     </div>
                 </div>
-                <div class="myday-item">
-                    <div class="myday" style="background-image: url(../img/pc-img/bench-accounting-C3V88BOoRoM-unsplash.jpg);">
-                        <div class="myday-owner">
-                            <div class="myday-ownerimg" style="background-image: url(./Chit-img/Chit\ \(5\).jpeg);"></div>
+                <div class="col-6">
+                    <div class="center">
+                        <div class="center-box">
+                            <div class="center-link active">
+                                <i class="fas fa-home center-icon"></i>
+                                
+                            </div>
+                            <div class="center-link">
+                                <i class="fas fa-flag center-icon"></i>
+                                <span class="noti">5</span>
+                            </div><div class="center-link">
+                                <i class="fas fa-users center-icon"></i>
+                                <span class="noti">15</span>
+                            </div><div class="center-link">
+                                <i class="fas fa-video center-icon"></i>
+                                <span class="noti">255</span>
+                            </div><div class="center-link">
+                                <i class="fas fa-box center-icon"></i>
+                                
+                            </div>
                         </div>
-                        <p class="myday-text">Messic</p>
                     </div>
                 </div>
-                <div class="myday-item">
-                    <div class="myday" style="background-image: url(./Chit-img/Chit\ \(10\).jpeg);">
-                        <div class="myday-owner">
-                            <div class="myday-ownerimg" style="background-image: url(./Chit-img/Chit\ \(2\).jpeg);"></div>
+                <div class="col-3">
+                    <div class="right">
+                        <div class="right-box">
+                            <div class="profile">
+                                <img class="profile-photo" src="../img/6232656_orig.jpg" alt="">
+                                <span class="profile-text">Hero</span>
+                            </div>
+                            <div class="noti-box">
+                                <div class="right-notification">
+                                    <i class="fas fa-plus"></i>
+                                </div>    
+                                <div class="right-notification">
+                                    <i class="fas fa-comment"></i>
+                                </div>   
+                                <div class="right-notification">
+                                    <i class="fas fa-bell"></i>
+                                </div>   
+                                <div class="right-notification">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>   
+                                </div>
+                            </div>
                         </div>
-                        <p class="myday-text">Ronaldo</p>
                     </div>
-                </div>
-                <div class="myday-item">
-                    <div class="myday" style="background-image: url(./Chit-img/Chit\ \(7\).jpeg);">
-                        <div class="myday-owner">
-                            <div class="myday-ownerimg" style="background-image: url(./Chit-img/Chit\ \(3\).jpeg);"></div>
-                        </div>
-                        <p class="myday-text">Mr.bean</p>
-                    </div>
-                </div>
-                <div class="myday-item">
-                    <div class="myday" style="background-image: url(./Chit-img/Chit\ \(6\).jpeg);">
-                        <div class="myday-owner">
-                            <div class="myday-ownerimg" style="background-image: url(./Chit-img/Chit\ \(6\).jpeg);"></div>
-                        </div>
-                        <p class="myday-text">Vpersic</p>
-                    </div>
-                </div>
-                <div class="scroll-myday">
-                    <i class="fas fa-arrow-right"></i>
                 </div>
             </div>
-            <div class="add-post"></div>
-            <div class="post-list"></div>
-        </section>
-        <section class="chat-box"></section>
+
+                <div class="row background-body">
+                    <div class=" col-3">
+                        <section class="left-side">
+                            <div class="left-profile">
+                                <img class="left-profile-photo" src="../img/6232656_orig.jpg" alt="">
+                                <span class="left-profile-text">Hero</span>
+                            </div>
+                            <div class="left-profile">
+                                <i class="left-profile-photo icons fas fa-user-friends"></i>
+                                <span class="left-profile-text app">Find Friends</span>
+                            </div>
+                            <div class="left-profile">
+                                <i class="left-profile-photo icons fa-solid fa-users-line"></i>
+                                <span class="left-profile-text app">Groups</span>
+                            </div>
+                            <div class="left-profile">
+                                <i class="left-profile-photo icons fas fa-tv"></i>
+                                <span class="left-profile-text app">Watch</span>
+                            </div>
+                            <div class="left-profile">
+                                <i class="left-profile-photo icons fas fa-memory"></i>
+                                <span class="left-profile-text app">Memories</span>
+                            </div>
+                            <div class="left-profile">
+                                <i class="left-profile-photo icons fas fa-book-bookmark"></i>
+                                <span class="left-profile-text app">Saved</span>
+                            </div>
+                            <div class="left-profile">
+                                <i class="left-profile-photo icons fas fa-flag"></i>
+                                <span class="left-profile-text app">Pages</span>
+                            </div>
+                            <div class="left-profile">
+                                <i class="left-profile-photo icons fa-solid fa-calendar"></i>
+                                <span class="left-profile-text app">Events</span>
+                            </div>
+                            <div class="left-profile">
+                                <i class="left-profile-photo icons fa-solid fa-folder-tree"></i>
+                                <span class="left-profile-text app">Most Recent</span>
+                            </div>
+                            <div class="left-profile">
+                                <i class="left-profile-photo icons fas fa-star"></i>
+                                <span class="left-profile-text app">Favorites</span>
+                            </div>
+                            <div class="left-profile">
+                                <i class="left-profile-photo icons fas fa-chevron-down"></i>
+                                <span class="left-profile-text app">See more</span>
+                            </div>
+                        </section>                          
+                    </div>
+                    <div class=" col-6">
+                        <section class="new-feed">
+                            <div class="my-day-list">
+                                <div class="myday-item">
+                                    <div class="myday" style="background-image: url(../img/pc-img/andras-vas-Bd7gNnWJBkU-unsplash.jpg);">
+                                        <div class="myday-owner">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                        <p class="myday-text">Add Your Story</p>
+                                    </div>
+                                </div>
+                                <div class="myday-item">
+                                    <div class="myday" style="background-image: url(../img/pc-img/bench-accounting-C3V88BOoRoM-unsplash.jpg);">
+                                        <div class="myday-owner">
+                                            <div class="myday-ownerimg" style="background-image: url(../img/pc-img/christian-wiediger-WkfDrhxDMC8-unsplash.jpg);"></div>
+                                        </div>
+                                        <p class="myday-text">Messic</p>
+                                    </div>
+                                </div>
+                                <div class="myday-item">
+                                    <div class="myday" style="background-image: url(../img/pc-img/christin-hume-Hcfwew744z4-unsplash.jpg);">
+                                        <div class="myday-owner">
+                                            <div class="myday-ownerimg" style="background-image: url(../img/pc-img/christin-hume-mfB1B1s4sMc-unsplash.jpg);"></div>
+                                        </div>
+                                        <p class="myday-text">Ronaldo</p>
+                                    </div>
+                                </div>
+                                <div class="myday-item">
+                                    <div class="myday" style="background-image: url(../img/pc-img/clement-helardot-95YRwf6CNw8-unsplash.jpg);">
+                                        <div class="myday-owner">
+                                            <div class="myday-ownerimg" style="background-image: url(../img/pc-img/cookie-the-pom-gySMaocSdqs-unsplash.jpg);"></div>
+                                        </div>
+                                        <p class="myday-text">Mr.bean</p>
+                                    </div>
+                                </div>
+                                <div class="myday-item">
+                                    <div class="myday" style="background-image: url(../img/pc-img/damian-zaleski-RYyr-k3Ysqg-unsplash.jpg);">
+                                        <div class="myday-owner">
+                                            <div class="myday-ownerimg" style="background-image: url(../img/pc-img/windows-Bnl5yt3SNsM-unsplash.jpg);"></div>
+                                        </div>
+                                        <p class="myday-text">Vpersic</p>
+                                    </div>
+                                    <div class="scroll-myday">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="add-post"></div>
+                            <div class="post-list"></div>
+                        </section>
+                        <section class="new-feed lookDisplay">
+                            <div class="top">
+                                <img class="left-profile-photo" src="../img/6232656_orig.jpg" alt="">
+                                <span>
+                                    What's on your mind, Hero?
+                                </span>
+                            </div>
+                            <div class="driver m-auto" style="width: 90%;" ><hr></div>
+                            <div class="container bottom p-2">
+                                <div class="row bottom-all justify-content-around">
+                                    <div class=" col-4 d-flex ms-6 align-items-center live-icon" style="width: 210px;">
+                                        <i class="fas fa-video icon"></i>
+                                        <p class=" mb-0 fs-5 fw-bolder">
+                                            Live video
+                                        </p>
+                                    </div>
+                                    <div class=" col-4 d-flex align-items-center" style="width: 215px;">
+                                        <i class="bi bi-images icon"></i>
+                                        <p class=" mb-0 fs-5 fw-bolder">
+                                            Photo/video
+                                        </p>
+                                    </div>
+                                    <div class=" col-4 d-flex align-items-center" style="width: 215px;">
+                                        <i class=" fas fa-face-smile icon"></i>
+                                        <p class=" mb-0 fs-5 fw-bolder">
+                                            Feeling/activity
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class=" col-3">
+                        <section class="chat-box">
+
+                        </section>
+                    </div>
+
+                </div>
+
+        </div>
+       
+       
+      
     </section>
 </body>
 </html>
