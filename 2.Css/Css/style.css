@@ -111,7 +111,7 @@ body{
     top: -14px;
     right: 5px;
     position: relative;
-    width: 27px;
+    width: 34px;
     font-weight: bolder;
     text-align: center;
 }
@@ -166,7 +166,7 @@ body{
 }
 .background-body{
     background-color: var(--dark);
-    height: 400vh;
+    /* height: 400vh; */
 }
 
 .left-side{
@@ -243,7 +243,8 @@ body{
 
 }
 .chat-box{
-    width: 25%;
+    width: 100%;
+    margin: 18px 0 0 50px;
 }
 
 .left-side{
@@ -289,17 +290,16 @@ body{
 .top{
     display: flex;
     align-items: center;
-    padding: 10px;
-
+    padding: 10px 0 13px 10px;
 }
 .top span{
     font-size: 20px;
     font-weight: bolder;
     margin-left: 10px;
-    padding: 7px;
+    padding: 7px 15px;
     border-radius: 20px;
     background-color: gray;
-    color: var(--noti);
+    color: var(--text);
     width: 90%;
 }
 .bottom{
@@ -319,4 +319,32 @@ body{
 .icon{
     font-size: 30px;
     margin-right: 10px;
+}
+.lookDisplay{
+    overflow: hidden;
+}
+.newFeedCard{
+    width: 300px;
+    padding: 15px 0 0 24px;
+}
+.newFeedCard img{
+    margin-right: 9px;
+}
+.newFeedText{
+    padding: 11px 0 2px 24px;
+}
+.chat-box{
+
+}
+.spon img{
+    width: 185px;
+    height: 150px;
+}
+.spon{
+    height: 153px;
+    align-items: center;
+}
+
+.col{
+    overflow: scroll;
 }
