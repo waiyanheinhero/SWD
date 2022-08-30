@@ -166,11 +166,14 @@ body{
 }
 .background-body{
     background-color: var(--dark);
-    /* height: 400vh; */
+    position: absolute;
+    z-index: -1;
+    top: 70px;
+    /* height: 4000vh; */
 }
 
 .left-side{
-    width: 25%;
+    width: 55%;
 }
 .new-feed{
     width: 100%;
@@ -253,7 +256,7 @@ body{
 .left-profile{
     display: flex;
     align-items: center;
-    width: 370px;
+    width: 280px;
     border-radius: 15px;
     padding: 15px 20px;
     transition: 0.5s;
@@ -344,7 +347,8 @@ body{
     height: 153px;
     align-items: center;
 }
-
-.col{
+.cols{
+    height: 100vh;
     overflow: scroll;
+    scroll-behavior: auto;
 }

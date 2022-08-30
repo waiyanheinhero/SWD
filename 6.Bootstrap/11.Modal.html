@@ -16,7 +16,7 @@
 <!--</button>-->
 
 
-<div class="my-5">
+<div class="m-5">
     <button class="btn btn-outline-danger" id="btn">Show</button>
 </div>
 <!-- Modal -->
@@ -43,8 +43,11 @@
 <script src="../5.jQuery/js/jquery.js"></script>
 <script>
 
-    $("#btn").click(function (){
-        $(".exampleModal").modal("show")
+
+    const myModal = new bootstrap.Modal('#exampleModal');
+
+    document.getElementById("btn").addEventListener("click",function(){
+            myModal.show()
     })
 
 </script>

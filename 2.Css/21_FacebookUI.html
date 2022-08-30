@@ -15,8 +15,8 @@
     
     <section class="fb-body">
 
-        <div class=" container-fluid position-fixed">
-            <div class="row nav">
+        <div class=" container-fluid">
+            <div class="row nav position-fixed w-100">
                 <div class=" col-3">
                     <div class="left">
                         <div class="left-box">
@@ -78,7 +78,7 @@
                 </div>   
             </div>
             <div class="row background-body">
-                <div class="col-3">
+                <div class="col-3 cols">
                     <section class="left-side">
                         <div class="left-profile">
                             <img class="left-profile-photo" src="../img/6232656_orig.jpg" alt="">
@@ -121,12 +121,32 @@
                             <span class="left-profile-text app">Favorites</span>
                         </div>
                         <div class="left-profile">
+                            <i class="left-profile-photo icons fas fa-support"></i>
+                            <span class="left-profile-text app">Help & support</span>
+                        </div>
+                        <div class="left-profile">
+                            <i class="left-profile-photo icons fas fa-section"></i>
+                            <span class="left-profile-text app">Settings</span>
+                        </div>
+                        <div class="left-profile dropdown" data-bs-toggle="dropdown">
                             <i class="left-profile-photo icons fas fa-chevron-down"></i>
-                            <span class="left-profile-text app">See more</span>
+                            <span class="left-profile-text app dropdown">See more</span>
+                                <ul class="dropdown-menu w-100">
+                                    <li><a class="dropdown-item alert alert-light" href="#">Help Center</a></li>
+                                    <li><a class="dropdown-item alert alert-light" href="#">Support Inbox</a></li>
+                                    <li><a class="dropdown-item alert alert-light" href="#">Report a problem</a></li>
+                                    <li><a class="dropdown-item alert alert-light" href="#">Terms & Policies</a></li>
+                                    <li><a class="dropdown-item alert alert-light" href="#">Your Time on Facebook</a></li>
+                                    <li><a class="dropdown-item alert alert-light" href="#">Device requests</a></li>
+                                    <li><a class="dropdown-item alert alert-light" href="#">Dark mode</a></li>
+                                    <li><a class="dropdown-item alert alert-light" href="#">Code Generator</a></li>
+                                </ul>                            
                         </div>
                     </section>                          
                 </div>
-                <div class="col-6">
+
+
+                <div class="col-6 cols">
                     <section class="new-feed">
                         <div class="my-day-list">
                             <div class="myday-item">
@@ -273,7 +293,9 @@
                          <img src="../img/pc-img/bench-accounting-C3V88BOoRoM-unsplash.jpg" class="img-fluid w-100"  alt="">
                     </section>
                 </div>
-                <div class="col-3">
+
+
+                <div class="col-3 cols">
                     <section class="chat-box">
                         <div>
                             <h3 class=" mb-3 fw-bolder">Sponsored</h3>
@@ -298,14 +320,19 @@
                     <hr class="driver m-auto mt-3" style="width: 95%;" >
                 </div>
             </div>
-
+        </div>  
+        
             <div class=" container-fluid">
-                
+               
             </div>
-        </div>
+        
        
        
       
     </section>
+
+
+
+<script src="../6.Bootstrap//node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
