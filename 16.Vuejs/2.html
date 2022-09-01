@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="app">
+    <h3>{{name}}</h3>
+    <h3>{{hungre ? "i am hungry":"i don't hungry"}}</h3>
+    <h3>{{age+1}}</h3>
+
+
+
+
+
+
+</div>
+
+
+<script src="./vue.js"></script>
+<script>
+
+    let vue = new Vue({                //option object
+        el: '#app',
+        data:{
+            name: "Ronaldo",
+            hungre: true,
+            age: 10,
+        }
+    })
+
+</script>    
+</body>
+</html>

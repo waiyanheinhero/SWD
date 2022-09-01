@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+
+
+    </style>
+</head>
+<body>
+
+    <div id="app">
+
+        <h3>{{title}}</h3>
+        <p>{{message}}</p>
+
+        <ul>
+             <li v-for="item in items">
+                <button @click="item.stock += 1">Add</button>
+                <input type="number" v-model.number="item.stock">
+                {{item.id}}
+                {{item.name}}
+                <b v-if="item.stock == 0">out of stock</b>
+            </li>
+            <p>Total Stock: {{total}}</p>
+            <input type="text" v-model.number="itemName">
+            <input type="number" v-model.number="itemStock">
+            <button @click="run()">Click</button>
+        </ul>
+
+        
+
+    </div>
+    
+
+
+
+
+<script src="./vue.js"></script>    
+<script>
+
+    let app = new Vue({
+        el: "#app",
+        data: {
+            title: "Min Ga lar Par",
+            message: "Hello",
+            items: [
+                {id:1,name:"apple",stock:3},
+                {id:2,name:"mango",stock:0},
+                {id:3,name:"banana",stock:3}
+            ],
+            itemName : "",
+            itemStock: ""
+        },
+        computed: {
+            total: function(){
+                return this.items.reduce((sum,el)=>sum+el.stock ,0)
+            }
+        },
+        methods: {
+            run(){
+                let newItem = {
+                    id: this.items.length+1,
+                    name: this.itemName,
+                    stock: this.itemStock,
+                }
+
+                this.items.push(newItem);
+                
+            },
+                itemName : "",
+                itemStock: ""
+        },
+
+    })
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+
+    <h3>{{number}}</h3>
+    <h3 v-if="number > 3">{{name}}</h3>
+    <button @click="run()">click</button>
+
+
+    <div v-if="type === 'A'">
+        A
+    </div>
+    <div v-else-if="type === 'B'">
+        B
+    </div>
+    <div v-else-if="type === 'C'">
+        C
+    </div>
+    <div v-else>
+        Not A/B/C
+    </div>
+
+
+</div>
+
+<script src="vue.js"></script>
+<script>
+
+let vue = new Vue({
+    el: "#app",
+    data: {
+        name: "I am > 3",
+        number: 0,
+        type: "C"
+    },
+    methods: {
+        run(){
+            this.number = Math.random().toFixed(2) * 10
+        }
+    }
+
+
+
+})
+
+
+</script>
+</body>
+</html>
