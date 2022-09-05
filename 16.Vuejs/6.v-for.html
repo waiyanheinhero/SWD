@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../6.Bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+    <style>
+        table{
+            margin-top: 10px;
+            width: 500px;
+            /*border-collapse: collapse;*/
+        }
+        th,tr,td{
+            border: 1px solid black ;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app" class="m-5">
+    <h3>{{title}}: {{totalLength}}</h3>
+    <input type="text" v-model="newItemName" class="p-2">
+    <input type="number" v-model.number="newItemPrice" class="p-2">
+    <button @keyup.enter="run()" class="btn btn-outline-info">Add</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="item in items" @dblclick="edit()">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="text-center" colspan="2">Total</td>
+                <td>{{total}}</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<script src="./vue.js"></script>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data:{
+            title: "item list",
+            items: [
+                {id:1,name:"apple",price:300},
+                {id:2,name:"orange",price:100},
+                {id:3,name:"mango",price:200},
+            ],
+            newItemName : "",
+            newItemPrice: ""
+        },
+        computed:{
+            totalLength:function (){
+                return this.items.length
+            },
+            total:function (){
+                return this.items.reduce((pv,cv)=>pv+cv.price,0)
+            }
+        },
+        methods:{
+            run(){
+                let newData ={
+                  id: this.items.length+1,
+                  name: this.newItemName,
+                  price: this.newItemPrice,
+                };
+                this.items.push(newData);
+
+            },
+            edit(){
+                alert("this is edit")
+            }
+
+
+        }
+    })
+</script>
+</body>
+</html>

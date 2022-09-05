@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../6.Bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    
+    <div class=" container" id="app">
+        <div class="row">
+            <div class="col-4">
+                <div class=" card">
+                    <div class=" card-body">
+                        <h1>{{result}}</h1>
+                        <div class="row form">
+                            <div class="col-6 mb-2">
+                                <input type="text" class=" form-control" id="input1" v-model.number="input1">
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class=" form-control" id="input2" v-model.number="input2">
+                            </div>
+                            <div class="mb-2">
+                                <button class="btn btn-primary w-100" @click="run()">Calculate</button>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary w-100" @click="save()">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li v-for="history in histories">{{history}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="./vue.js"></script>
+<script>
+
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            result: 0,
+            input1: "",
+            input2: "",
+            histories: [] 
+        },
+        methods: {
+            run(){
+                this.result =  `${this.input1}+${this.input2}=${this.input1+this.input2}`
+            },
+            save(){
+                this.histories.push(this.result);
+                this.input1 = "";
+                this.input2 = "";
+                this.result = ""
+            },
+            
+        },
+    })
+
+
+</script>
+
+</body>
+</html>
