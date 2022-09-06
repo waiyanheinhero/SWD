@@ -8,9 +8,17 @@
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../6.Bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
     <style>
         .done{
             text-decoration: line-through;
+            animation: 0.5s bounceIn;
+        }
+        .created{
+            animation: 0.5s fadeInDown;
+        }
+        .deleted{
+            animation: 0.5s fadeOutLeft;
         }
     </style>
 </head>
@@ -20,7 +28,7 @@
         <div class=" row d-flex justify-content-center">
             <div class=" col-12 col-md-4">
                 <div class="">
-                    <h2 class=" text-center">Vue Js Todo List</h2>
+                    <h2 class=" text-center mb-3" >Vue Js Todo List</h2>
 
                     <div class="row form mb-3">
                         <div class="col-10">
@@ -34,21 +42,24 @@
                     </div>
 
                     <div class=" d-flex justify-content-between">
-                        <p class="mb-0 fw-bolder">Job List</p>
-                        <p class=" text-bg-danger">
-                            Done: {{doneTotal}}
+                        <p class="mb-0 fw-bolder">Job List{{lists.length > 1 ? "s": ""}}</p>
+                        <p v-if="lists.length>0 && doneTotal == lists.length" class=" text-bg-success">
+                            All Done<i class=" fas fa-check-circle"></i>
+                        </p>
+                        <p v-else="" class=" text-bg-danger">
+                            Done:{{doneTotal}}
                         </p>
                     </div>
 
                     <ul class=" list-group">
-                        <li class=" list-group-item d-flex justify-content-between" v-for="list in lists" :key="list.id">
+                        <li :class="['list-group-item d-flex justify-content-between created',{'deleted': list.isDelete}] " v-for="list in lists" :key="list.id">
                             <input type="text" class="form-control" v-if="list.isEdit == true" v-model="list.message" @keyup.enter="list.isEdit = false">
                             <div v-else class=" custom-control custom-checkbox">
                                 <input class="custom-control-input" type="checkbox" v-model="list.isDone">
                                 <label :class="['custom-control-label',{'done': list.isDone}]" for="" @dblclick="list.isEdit = true">{{list.message}}</label>
                             </div>
-                            <i class=" fas fa-trash-alt text-primary" @click="del(list.id)"></i>
-                        </li>
+                            <i class=" fas fa-trash-alt text-primary" @click="[list.isDelete = true,del(list.id)]"></i>
+                        </li> 
                     </ul>
                 </div>
 
@@ -82,13 +93,16 @@
                     message: this.newtext,
                     isDone: false,
                     isEdit: false,
+                    isDelete: false,
                 })
                 this.newtext = "";
             },
-            del (x){
-                if(confirm("Are you sure delete")){
-                    this.lists = this.lists.filter((el)=>el.id !== x)
-                }
+            del(x){
+                // if(confirm("Are you sure delete")){
+                    
+                // }
+                setTimeout(()=>this.lists = this.lists.filter((el)=>el.id !== x),600)
+
             }
         },
     })
