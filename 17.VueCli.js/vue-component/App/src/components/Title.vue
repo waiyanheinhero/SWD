@@ -1,19 +1,52 @@
+<!--<template>-->
+<!--    <div>-->
+<!--        <h1>{{title}}</h1>-->
+<!--    </div>-->
+<!--</template>-->
+
+<!--<script>-->
+<!--    export default {-->
+<!--        data() {-->
+<!--            return {-->
+<!--                title: "Test todo"-->
+<!--            }-->
+<!--        },-->
+<!--    }-->
+<!--</script>-->
+
+<!--<style lang="scss" scoped>-->
+
+<!--</style>-->
+
 <template>
     <div>
-        <h1>{{title}}</h1>
+        <h1>
+          {{postTitle}}
+          <span class="badge rounded-pill text-bg-primary">{{badgeTitle}}</span>
+        </h1>
     </div>
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                title: "Test todo"
-            }
-        },
-    }
+  export default {
+    props: {
+      postTitle: {
+        type: String,
+        required: true,
+        default: "This is title"
+      },
+      badgeTitle: {
+        type: Number
+      }
+    },
+    data() {
+      return {
+          name: "Title Ronaldo",
+      }
+    },
+  }
 </script>
 
-<style lang="scss" scoped>
+<style>
 
 </style>
