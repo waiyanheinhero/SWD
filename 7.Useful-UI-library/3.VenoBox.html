@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./vendor/vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./vendor/vendor/venobox/venobox.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card-columns my-5">
+                <div class="mb-3">
+                    <a class="venobox" data-gall="aa"  href="../img/3.jpg">
+                        <img src="../img/1.jpg" class="img-fluid" alt="image alt"/>
+                    </a>
+                </div>
+                <div class="mb-3">
+                    <a class="venobox" data-gall="aa"  href="../img/3.jpg">
+                        <img src="../img/1.jpg" class="img-fluid" alt="image alt"/>
+                    </a>
+                </div>
+                <div class="mb-3">
+                    <a class="venobox" data-gall="aa"  href="../img/3.jpg">
+                        <img src="../img/1.jpg" class="img-fluid" alt="image alt"/>
+                    </a>
+                </div>
+                <div class="mb-3">
+                    <a class="venobox" data-gall="aa"  href="../img/3.jpg">
+                        <img src="../img/1.jpg" class="img-fluid" alt="image alt"/>
+                    </a>
+                </div>
+                <div class="mb-3">
+                    <a class="venobox" data-gall="aa"  href="../img/3.jpg">
+                        <img src="../img/1.jpg" class="img-fluid" alt="image alt"/>
+                    </a>
+                </div>
+                <div class="mb-3">
+                    <a class="venobox" data-gall="aa"  href="../img/pc-img/andras-vas-Bd7gNnWJBkU-unsplash.jpg">
+                        <img src="../img/1.jpg" class="img-fluid" alt="image alt"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="./vendor/vendor/venobox/venobox.min.js"></script>
+<script src="./vendor/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+   $(document).ready(function(){
+        $('.venobox').venobox({
+            framewidth : '400px',                            // default: ''
+            frameheight: 'auto',                            // default: ''
+            border     : '2',                             // default: '0'
+            bgcolor    : '#ffffff60',                          // default: '#fff'
+            titleattr  : 'data-title',                       // default: 'title'
+            numeratio  : true,                               // default: false
+            infinigall : true,                               // default: false
+            share      : ['facebook', 'twitter', 'download'] // default: []
+        });
+    });
+</script>
+</body>
+</html>

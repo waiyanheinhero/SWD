@@ -2,7 +2,7 @@
   <div class="p-3 m-3">
       <Title post-title="Fruit" :badge-title="12"></Title>
       <ul class="list-group">
-          <lists v-for="(fruit,index) in fruits" :listTest="fruit" :current-index="index" @toParent="run"></lists>
+          <lists v-for="(fruit,index) in fruits" :key="fruit" :listTest="fruit" :current-index="index" @toParent="run"></lists>
       </ul>
 
   </div>

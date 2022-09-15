@@ -12,7 +12,7 @@
             <p v-if="lists.length>0 && doneTotal == lists.length" class=" text-bg-success">
               All Done<i class=" fas fa-check-circle"></i>
             </p>
-            <p v-else="" class=" text-bg-danger">
+            <p v-else class=" text-bg-danger">
               Done:{{doneTotal}}
             </p>
           </div>
