@@ -4,7 +4,7 @@
 }
 
 :root{
-    --primary-soft: #f9f9f9;
+    --primary-soft: #f3f3f3;
 }
 
 .content{
@@ -16,11 +16,34 @@
     position: sticky;
     top: 0.7rem;
     z-index: 2000;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 
 .show-bar{
     cursor: pointer;
+}
+
+.user-img{
+    width: 30px;
+    border-radius: 50%;
+    height: 30px;
+}
+.aside{
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+.card{
+    border: none;
+}
+.status-card{
+    transition: 0.5s;
+}
+.status-card:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.status-card:active{
+
 }
 
 @media screen and (max-width: 780px) {
