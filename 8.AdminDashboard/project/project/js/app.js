@@ -12,3 +12,4 @@ function go(url){
     },500)
     
 }
+

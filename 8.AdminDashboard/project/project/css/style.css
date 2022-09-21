@@ -46,6 +46,23 @@
 
 }
 
+.ov-img{
+    margin: -10px;
+}
+.item-card{
+    
+}
+.item-card-img{
+    height: 300px;
+}
+.item-card-img:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+.carousel{
+    margin-top: -120px;
+}
+
 @media screen and (max-width: 780px) {
     .aside{
         position: fixed;
