@@ -63,6 +63,32 @@
     margin-top: -120px;
 }
 
+.avatar{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: .7rem;
+    justify-content: center;
+    align-items: center;
+}
+.users-list li img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 10px 0rgba(107,111,130,.3);
+}
+.table td, .table th {
+    padding: 2rem;
+    vertical-align: centre;
+    border-top: 1px solid #dee2e6;
+}
+.round{
+    border-radius: 1rem;
+}
+
 @media screen and (max-width: 780px) {
     .aside{
         position: fixed;
